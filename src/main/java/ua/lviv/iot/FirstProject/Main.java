@@ -1,6 +1,6 @@
 package ua.lviv.iot.FirstProject;
 
-
+import java.io.IOException;
 import java.util.*;
 import java.lang.*;
 
@@ -9,7 +9,7 @@ import ua.lviv.iot.FirstProject.SportShop.EquipmentInfo;
 import ua.lviv.iot.FirstProject.Manager.impl.EquipmentManager;
 
 public class Main {
-    public static void main(String[] args) {
+    public static void main(String[] args) throws IOException {
 
         EquipmentManager manager = new EquipmentManager();
         List<EquipmentInfo> availableEquipment = new LinkedList<EquipmentInfo>();
@@ -46,7 +46,7 @@ public class Main {
         System.out.println("sorted by size equipment");
         System.out.println(equipmentChosenBySeasonAndGender);
 
-
+        Writer.writeCSV(availableEquipment);
     }
 }
 

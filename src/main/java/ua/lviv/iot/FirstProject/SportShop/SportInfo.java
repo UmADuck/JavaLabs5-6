@@ -13,4 +13,12 @@ import ua.lviv.iot.FirstProject.Models.*;
 public abstract class SportInfo {
     protected Seasons season;
     protected SportNames sportName;
+
+    public String getHeaders() {
+        return "Seasons, " + "SportNames, ";
+    }
+
+    public String toCSV() {
+        return "Season: " + season + ", SportName" + sportName + ", ";
+    }
 }
