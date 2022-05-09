@@ -21,6 +21,17 @@ public class EquipmentInfo extends SportInfo {
     }
 
     @Override
+    public String getHeaders() {
+        return super.getHeaders() + "equipmentItems, " + "priceInUah, " + "size";
+    }
+
+    public String toCSV() {
+        return super.toCSV() + "equipment items: " + equipmentItems
+                + ", price in UAH: " + priceInUah + ", size: " + size;
+    }
+
+
+    @Override
     public String toString() {
         return this.sportName + ":(Season: " + this.season
                 + ", EquipmentItems: " + this.equipmentItems

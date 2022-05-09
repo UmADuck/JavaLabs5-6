@@ -28,7 +28,7 @@ public class EquipmentManager implements IEquipmentManager {
                 .filter(item -> ((item.getSeason().equals(season) || item.getSeason().equals(Seasons.summer)) &&
                         (item.getSize().equals(Size) || item.getSize().equals(Sizes.S))))
                 .collect(Collectors.toList()));
-        if  (result.isEmpty())
+        if (result.isEmpty())
             return null;
         else return result;
     }
